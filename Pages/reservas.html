@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../image/logo.png" type="image/png">
+    <link rel="stylesheet" href="../style.css">
+    <title>Reservas - EsAqui </title>
+
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">
+            <img src="../image/logo.png" alt="logo">
+        </div>
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="./sobre.html">Sobre la Casa</a>
+            <a href="./galeria.html">Galería</a>
+            <a href="./servicios.html">Servicios</a>
+            <a href="./contactos.html">Contacto</a>
+            <a href="#reservas.html" class="btn">Reservar ahora</a>
+        </nav>
+    </header>
+
+    <!-- Sección de Reservas -->
+    <section class="reservas-section" id="reservas">
+        <h1>Reservas</h1>
+        <div class="reservas-content">
+            <!-- Formulario de Reservas -->
+            <div class="reservas-form">
+                <form action="#" method="post">
+                    <input type="text" name="nombre" placeholder="Nombre" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="tel" name="telefono" placeholder="Teléfono" required>
+                    <input type="date" name="fecha-llegada" placeholder="Fecha de Llegada" required>
+                    <input type="date" name="fecha-salida" placeholder="Fecha de Salida" required>
+                    <select name="personas" required>
+                        <option value="" disabled selected>Número de Personas</option>
+                        <option value="1">1 persona</option>
+                        <option value="2">2 personas</option>
+                        <option value="3">3 personas</option>
+                        <option value="4">4 personas</option>
+                        <option value="5">5 personas</option>
+                        <option value="6">6 personas</option>
+                        <option value="7">7 personas</option>
+                        <option value="8">8 personas</option>
+                        <option value="9">9 personas</option>
+                        <option value="10">10 personas</option>
+                    </select>
+                    <textarea name="mensaje" placeholder="Mensaje adicional (opcional)"></textarea>
+                    <button type="submit">Confirmar Reserva</button>
+                </form>
+            </div>
+            <!-- Calendario de Disponibilidad -->
+            <div class="calendar">
+                <h2>Calendario de Disponibilidad</h2>
+                <iframe src="https://calendar.google.com/calendar/embed?src=[TU_CORREO]&ctz=America%2FArgentina%2FBuenos_Aires" style="border: 0" width="100%" height="400px" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>© 2025 EsAqui. Todos los derechos reservados.</p>
+        <p>Síguenos en <a href="[enlace a Instagram]">Instagram</a> y <a href="[enlace a Facebook]">Facebook</a>.</p>
+    </footer>
+
+</body>
+</html>

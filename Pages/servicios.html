@@ -11,20 +11,32 @@
 <body>
 
     <!-- Encabezado -->
-    <header>
-        <div class="logo">
-            <img src="../image/logo.png" alt="logo">
+    <header class="header">
+        <!-- Logo -->
+        <div class="header__logo">
+            <img src="../image/logo.png" alt="Logo" width="150">
         </div>
-        <nav>
+    
+        <!-- Checkbox oculto para menú móvil -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        
+        <!-- Botón del menú hamburguesa (label asociado al checkbox) -->
+        <label for="menu-toggle" class="menu-btn">
+            <span class="menu-btn__line"></span>
+            <span class="menu-btn__line"></span>
+            <span class="menu-btn__line"></span>
+        </label>
+    
+        <!-- Navegación -->
+        <nav class="header__nav">
             <a href="../index.html">Inicio</a>
             <a href="./sobre.html">Sobre la Casa</a>
             <a href="./galeria.html">Galería</a>
-            <a href="#servicios.html">Servicios</a>
+            <a href="./servicios.html">Servicios</a>
             <a href="./contactos.html">Contacto</a>
             <a href="./reservas.html" class="btn">Reservar ahora</a>
         </nav>
     </header>
-
     <!-- Sección de Servicios -->
     <section class="services-section" id="servicios">
         <h1>Nuestros Servicios</h1>

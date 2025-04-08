@@ -1,3 +1,108 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Logo */
+.header__logo img {
+    height: 40px;
+    width: auto;
+}
+
+/* Checkbox oculto */
+.menu-toggle {
+    display: none;
+}
+
+/* Botón hamburguesa (solo visible en móvil) */
+.menu-btn {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.menu-btn__line {
+    width: 25px;
+    height: 2px;
+    background: #333;
+    margin: 3px 0;
+    transition: all 0.3s;
+}
+
+/* Navegación (visible en desktop) */
+.header__nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.header__nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.header__nav a.btn {
+    background: #ff6b6b;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+}
+
+/* Responsive: Menú móvil */
+@media (max-width: 768px) {
+    /* Mostrar botón hamburguesa */
+    .menu-btn {
+        display: flex;
+    }
+
+    /* Ocultar navegación por defecto */
+    .header__nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        height: 100vh;
+        background: #fff;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        transition: left 0.3s;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        z-index: 99;
+    }
+
+    /* Mostrar navegación al hacer clic (checkbox checked) */
+    .menu-toggle:checked ~ .header__nav {
+        left: 0;
+    }
+
+    /* Animación del botón hamburguesa a "X" */
+    .menu-toggle:checked ~ .menu-btn .menu-btn__line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle:checked ~ .menu-btn .menu-btn__line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked ~ .menu-btn .menu-btn__line:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
